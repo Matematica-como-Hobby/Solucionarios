@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.12.3)  18 DEC 2024 14:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.12.3)  18 DEC 2024 15:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -119,13 +119,13 @@ Here is how much of TeX's memory you used:
  19151 multiletter control sequences out of 15000+600000
  470923 words of font info for 34 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 54i,8n,62p,203b,186s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 54i,8n,62p,203b,258s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
 x12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on cap2.pdf (2 pages, 56661 bytes).
+Output written on cap2.pdf (2 pages, 56696 bytes).
 PDF statistics:
  36 PDF objects out of 1000 (max. 8388607)
  21 compressed objects within 1 object stream
