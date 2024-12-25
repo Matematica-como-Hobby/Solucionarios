@@ -1,0 +1,78 @@
+\chapter{História e motivação}
+
+\begin{exercicio}
+	Exiba uma bijeção entre o conjunto dos números inteiros e os naturais.
+\end{exercicio}
+\begin{solucao}
+	Defina a função $f:\mathbb{N}\to\mathbb{Z}$ por $f(n)=-\frac{n}{2}$ se $n$ é par e por $f(n)=\frac{n+1}{2}$ se $n$ é ímpar. $f$ é uma bijeção.
+\end{solucao}
+
+\begin{exercicio}
+	Prove que qualquer subconjunto infinito dos números naturais é enumerável.
+\end{exercicio}
+\begin{solucao}
+	Lembre: dizemos que um conjunto $X$ é \textit{enumerável} se é finito ou é equipotente a $\mathbb{N}$, isto é, se existe uma bijeção $f:\mathbb{N}\to X$.
+	
+	Todo conjunto finito é enumerável. Estão vamos olhar apenas o caso $X$ ser infinito. Defina $f:\mathbb{N}\to X$ da seguinte maneira: $f(0)$ é o menor elemento de $X$; $f(1)$ é o segundo menor elemento de $X$; $f(2)$ é o terceiro menor elemento de $X$, e assim por diante. De maneira mais rigorosa, $f$ é definida indutivamente por: $f(0)=\min X$; uma vez escolhidos, $f(0),f(1),\ldots,f(n)$, definimos $f(n+1)=\min(X\backslash\{f(0),f(1),\ldots,f(n)\})$. Observe que $f$ é crescente, logo injetiva. Também é sobrejetiva, pois do contrário, se existe um $x\in X\backslash f(\mathbb{N})$, então $x\in X\backslash\{f(0),f(1),\ldots,f(n)\}$ para cada $n\in\mathbb{N}$. Da maneira como construímos $f$ concluímos que $x>f(n)\ \forall n\in\mathbb{N}$ e assim $f(\mathbb{N})$ é um conjunto limitado, logo finito. Como $f:\mathbb{N}\to f(\mathbb{N})$ é uma bijeção, $\mathbb{N}$ seria finito, um absurdo. Portanto $f:\mathbb{N}\to X$ é uma bijeção, logo $X$ é enumerável.
+\end{solucao}
+
+\begin{exercicio}
+	Na bijeção que construímos entre os números naturais e os polinômios, encontre o polinômio associado ao número 30.
+\end{exercicio}
+\begin{solucao}
+	\begin{equation*}
+		\begin{array}{|ccc|ccc|ccc|}
+			\hline
+			0  & \mapsto & -x-1  & 11 & \mapsto & -x-2       & 21 & \mapsto & -2x^2-2x-1 \\ \hline
+			1  & \mapsto & -x    & 12 & \mapsto & -x+2       & 22 & \mapsto & -2x^2-2x   \\ \hline
+			2  & \mapsto & -x+1  & 13 & \mapsto & x-2        & 23 & \mapsto & -2x^2-2x+1 \\ \hline
+			3  & \mapsto & x-1   & 14 & \mapsto & x+2        & 24 & \mapsto & -2x^2-2x+2 \\ \hline
+			4  & \mapsto & x     & 15 & \mapsto & 2x-2       & 25 & \mapsto & -2x^2-x-2  \\ \hline
+			5  & \mapsto & x+1   & 16 & \mapsto & 2x-1       & 26 & \mapsto & -2x^2-x-1  \\ \hline
+			6  & \mapsto & -2x-2 & 17 & \mapsto & 2x         & 27 & \mapsto & -2x^2-x    \\ \hline
+			7  & \mapsto & -2x-1 & 18 & \mapsto & 2x+1       & 28 & \mapsto & -2x^2-x+1  \\ \hline
+			8  & \mapsto & -2x   & 19 & \mapsto & 2x+2       & 29 & \mapsto & -2x^2-x+2  \\ \hline
+			9  & \mapsto & -2x+1 & 20 & \mapsto & -2x^2-2x-2 & 30 & \mapsto & -2x^2-2    \\ \hline
+			10 & \mapsto & -2x+2 &    &         &            &    &         &            \\ \hline
+		\end{array}
+	\end{equation*}
+	Portanto o polinômio associado ao número 30 é $-2x^2-2$.
+\end{solucao}
+
+\begin{exercicio}
+	Na bijeção que construímos entre os números naturais e os números algébricos, encontre o número natural associado ao número $\sqrt{3}$
+\end{exercicio}
+\begin{solucao}
+	content
+\end{solucao}
+
+\begin{exercicio}
+	Suponha que, em um conjunto infinito, existe uma forma de representar cada elemento do conjunto com uma sequência finita de símbolos, dentre um conjunto finito de símbolos. Mostre que esse conjunto é enumerável e use esse resultado diretamente para mostrar que os conjuntos dos números racionais e dos números algébricos são enumeráveis.
+\end{exercicio}
+\begin{solucao}
+	Seja $\Sigma=\{\sigma_1,\ldots,\sigma_m\}$ o conjunto de símbolos. Para cada $n\in\mathbb{N}$, seja $S_n=\{(\tau_1,\ldots,\tau_n):\tau_1,\ldots,\tau_n\in \Sigma\}$ e ponha $S=\bigcup_{n=1}^\infty S_n$. $S$ é enumerável por ser uma reunião enumerável de conjuntos enumeráveis (finitos).\footnote{\cite[p. 51]{Lima16}} Seja $X$ o conjunto infinito do exercício. A suposição de que cada elemento de $X$ possa ser representado como uma sequência finita de símbolos significa que existe uma função $f:X\to S$. Esta função deve ser injetiva, pois não podemos usar a mesma sequência de símbolos para representar dois ou mais elementos distintos em $X$. Então $f: X\to f(X)\subset S$ é bijetiva e como $f(X)$ é enumerável, por ser um subconjunto de um conjunto enumerável conforme o Exercício 2, $X$ é enumerável.
+	
+	Todo número racional pode ser escrito como $a/b$, com $a,b\in \mathbb{Z}$, $b\neq 0$. Ambos $a$ e $b$ são escritos como uma sequência finita de símbolos (os algarismos de 0 a 9 e o sinal $+$ ou $-$). Pelo resultado demonstrado acima, $\mathbb{Q}$ é enumerável.
+	
+	Cada polinômio com coeficientes inteiros pode ser escrito como uma sequência finita de símbolos, logo o conjunto formado por esses polinômios é enumerável. O conjunto dos números algébricos é a união dos conjuntos das raízes de cada um desses polinômios. Como essa é uma união enumerável (o conjunto desses polinômios é enumerável) de conjuntos finitos (cada polinômio possui um número finito de raízes), o conjunto dos números algébricos é enumerável.
+\end{solucao}
+
+\begin{exercicio}
+	Imagine que o hotel de Hilbert, com uma quantidade infinita enumerável de quartos, todos ocupados, receba infinitos trens com infinitos vagões e cada vagão com infinitos passageiros (todas essas quantidades enumeráveis). Como o gerente pode alocar todos os atuais hóspedes em quartos separados?
+\end{exercicio}
+\begin{solucao}
+	Cada passageiro tem uma identificação $(p,q,r)$: $p$ = número do trem; $q$ = número do vagão; $r$ = número do assento. Cada hóspede no quarto $n$ será realocado para o quarto $2n-1$, e cada passageiro com ID $(p,q,r)$ será hospedado no quarto $2^p3^q(2r-1)$.
+	
+	Isto pode ser generalizado: hóspede $n\mapsto$ quarto $2n-1$; passageiro $(a_1,\ldots,a_m)\mapsto$ quarto $2^{a_1}3^{a_2}\cdots p_{m-1}^{a_{m-1}}(2a_m-1)$, em que $2,3,\ldots,p_{m-1}$ são números primos.
+\end{solucao}
+
+\begin{exercicio}
+	Imagine, agora, um hotem maior ainda, com um quarto para cada número real, totalmente ocupado. Um ônibus igualmente gigantesco, com um passageiro para cada número real, chega ao hotel. Como o gerente pode fazer para rearranjar os hóspedes para acolher os novos visitantes, sempre em quartos separados?
+\end{exercicio}
+\begin{solucao}
+	\begin{itemize}
+		\item Hóspede $x\mapsto$ quarto $\arctan x$.
+		\item Passageiro $y\mapsto$ quarto $y+\pi/2$ se $y\geq0$ ou $y-\pi/2$ se $y<0$. 
+	\end{itemize}
+	Note que o hotel ficará com um quarto vago (o de número $-\pi/2$).
+\end{solucao}
