@@ -1,26 +1,29 @@
 \documentclass[portuguese,12pt,a4paper]{book}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{mathtools}
 \usepackage{amssymb}
 \usepackage{amsthm}
-\usepackage{babel}
 \usepackage[colorlinks=true]{hyperref}
-%\usepackage{biblatex}
-%\addbibresource{bibliografia.bib}
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+\addbibresource{bibliografia.bib}
 
-\title{A teoria dos conjuntos e os fundamentos da matemática - Soluções}
+\title{A teoria dos conjuntos e os fundamentos da matemÃ¡tica - SoluÃ§Ãµes}
 
 \newcommand{\cqd}{\hfill $\square$}
-\newenvironment{solucao}[1][]{\noindent\textbf{Solução:} }{\cqd}
-\newtheorem{exercicio}{Exercício}
+\newenvironment{solucao}[1][]{\noindent\textbf{SoluÃ§Ã£o:} }{\cqd}
+\newtheorem{exercicio}{ExercÃ­cio}
 
 \begin{document}
 	
+    \author{}
 	\maketitle
-	\tableofcontents
-	
+    \tableofcontents
 	\include{capitulos/cap1}
 	\include{capitulos/cap2}
 	\include{capitulos/cap3}
@@ -34,11 +37,5 @@
 	\include{capitulos/cap11}
 	\include{capitulos/cap12}
 	
-	%\bibliographystyle{amsplain}
-	%\printbibliography[title=Referências]
-	%\bibliography{bibliografia.bib}
-	\begin{thebibliography}{10}
-		\bibitem[Fa]{Fajardo} FAJARDO, R. A. dos S. \textit{A Teoria dos Conjuntos e os Fundamentos da Matemática}. São Paulo: Edusp, 2024.
-		\bibitem[Li]{Lima16} LIMA, E. L. \textit{Curso de análise}. 14 ed. Rio de Janeiro: Impa, 2016. v. 1.
-	\end{thebibliography}
+	\printbibliography
 \end{document}
