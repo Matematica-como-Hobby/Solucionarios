@@ -1,23 +1,23 @@
-\chapter{História e Motivação}
+\chapter{HistÃ³ria e MotivaÃ§Ã£o}
 
 \begin{exercicio}
-	Exiba uma bijeção entre o conjunto dos números inteiros e os naturais.
+	Exiba uma bijeÃ§Ã£o entre o conjunto dos nÃºmeros inteiros e os naturais.
 \end{exercicio}
 \begin{solucao}
-	Defina a função $f:\mathbb{N}\to\mathbb{Z}$ por $f(n)=-\frac{n}{2}$ se $n$ é par e por $f(n)=\frac{n+1}{2}$ se $n$ é ímpar. $f$ é uma bijeção.
+	Defina a funÃ§Ã£o $f:\mathbb{N}\to\mathbb{Z}$ por $f(n)=-\frac{n}{2}$ se $n$ Ã© par e por $f(n)=\frac{n+1}{2}$ se $n$ Ã© Ã­mpar. $f$ Ã© uma bijeÃ§Ã£o.
 \end{solucao}
 
 \begin{exercicio}
-	Prove que qualquer subconjunto infinito dos números naturais é enumerável.
+	Prove que qualquer subconjunto infinito dos nÃºmeros naturais Ã© enumerÃ¡vel.
 \end{exercicio}
 \begin{solucao}
-	Lembre: dizemos que um conjunto $X$ é \textit{enumerável} se é finito ou é equipotente a $\mathbb{N}$, isto é, se existe uma bijeção $f:\mathbb{N}\to X$.
+	Lembre: dizemos que um conjunto $X$ Ã© \textit{enumerÃ¡vel} se Ã© finito ou Ã© equipotente a $\mathbb{N}$, isto Ã©, se existe uma bijeÃ§Ã£o $f:\mathbb{N}\to X$.
 	
-	Todo conjunto finito é enumerável. Estão vamos olhar apenas o caso $X$ ser infinito. Defina $f:\mathbb{N}\to X$ da seguinte maneira: $f(0)$ é o menor elemento de $X$; $f(1)$ é o segundo menor elemento de $X$; $f(2)$ é o terceiro menor elemento de $X$, e assim por diante. De maneira mais rigorosa, $f$ é definida indutivamente por: $f(0)=\min X$; uma vez escolhidos, $f(0),f(1),\ldots,f(n)$, definimos $f(n+1)=\min(X\backslash\{f(0),f(1),\ldots,f(n)\})$. Observe que $f$ é crescente, logo injetiva. Também é sobrejetiva, pois do contrário, se existe um $x\in X\backslash f(\mathbb{N})$, então $x\in X\backslash\{f(0),f(1),\ldots,f(n)\}$ para cada $n\in\mathbb{N}$. Da maneira como construímos $f$ concluímos que $x>f(n)\ \forall n\in\mathbb{N}$ e assim $f(\mathbb{N})$ é um conjunto limitado, logo finito. Como $f:\mathbb{N}\to f(\mathbb{N})$ é uma bijeção, $\mathbb{N}$ seria finito, um absurdo. Portanto $f:\mathbb{N}\to X$ é uma bijeção, logo $X$ é enumerável.
+	Todo conjunto finito Ã© enumerÃ¡vel. EstÃ£o vamos olhar apenas o caso $X$ ser infinito. Defina $f:\mathbb{N}\to X$ da seguinte maneira: $f(0)$ Ã© o menor elemento de $X$; $f(1)$ Ã© o segundo menor elemento de $X$; $f(2)$ Ã© o terceiro menor elemento de $X$, e assim por diante. De maneira mais rigorosa, $f$ Ã© definida indutivamente por: $f(0)=\min X$; uma vez escolhidos, $f(0),f(1),\ldots,f(n)$, definimos $f(n+1)=\min(X\backslash\{f(0),f(1),\ldots,f(n)\})$. Observe que $f$ Ã© crescente, logo injetiva. TambÃ©m Ã© sobrejetiva, pois do contrÃ¡rio, se existe um $x\in X\backslash f(\mathbb{N})$, entÃ£o $x\in X\backslash\{f(0),f(1),\ldots,f(n)\}$ para cada $n\in\mathbb{N}$. Da maneira como construÃ­mos $f$ concluÃ­mos que $x>f(n)\ \forall n\in\mathbb{N}$ e assim $f(\mathbb{N})$ Ã© um conjunto limitado, logo finito. Como $f:\mathbb{N}\to f(\mathbb{N})$ Ã© uma bijeÃ§Ã£o, $\mathbb{N}$ seria finito, um absurdo. Portanto $f:\mathbb{N}\to X$ Ã© uma bijeÃ§Ã£o, logo $X$ Ã© enumerÃ¡vel.
 \end{solucao}
 
 \begin{exercicio}
-	Na bijeção que construímos entre os números naturais e os polinômios, encontre o polinômio associado ao número 30.
+	Na bijeÃ§Ã£o que construÃ­mos entre os nÃºmeros naturais e os polinÃ´mios, encontre o polinÃ´mio associado ao nÃºmero 30.
 \end{exercicio}
 \begin{solucao}
 	\begin{equation*}
@@ -36,43 +36,43 @@
 			10 & \mapsto & -2x+2 &    &         &            &    &         &            \\ \hline
 		\end{array}
 	\end{equation*}
-	Portanto o polinômio associado ao número 30 é $-2x^2-2$.
+	Portanto o polinÃ´mio associado ao nÃºmero 30 Ã© $-2x^2-2$.
 \end{solucao}
 
 \begin{exercicio}
-	Na bijeção que construímos entre os números naturais e os números algébricos, encontre o número natural associado ao número $\sqrt{3}$
+	Na bijeÃ§Ã£o que construÃ­mos entre os nÃºmeros naturais e os nÃºmeros algÃ©bricos, encontre o nÃºmero natural associado ao nÃºmero $\sqrt{3}$
 \end{exercicio}
 \begin{solucao}
 	content
 \end{solucao}
 
 \begin{exercicio}
-	Suponha que, em um conjunto infinito, existe uma forma de representar cada elemento do conjunto com uma sequência finita de símbolos, dentre um conjunto finito de símbolos. Mostre que esse conjunto é enumerável e use esse resultado diretamente para mostrar que os conjuntos dos números racionais e dos números algébricos são enumeráveis.
+	Suponha que, em um conjunto infinito, existe uma forma de representar cada elemento do conjunto com uma sequÃªncia finita de sÃ­mbolos, dentre um conjunto finito de sÃ­mbolos. Mostre que esse conjunto Ã© enumerÃ¡vel e use esse resultado diretamente para mostrar que os conjuntos dos nÃºmeros racionais e dos nÃºmeros algÃ©bricos sÃ£o enumerÃ¡veis.
 \end{exercicio}
 \begin{solucao}
-	Seja $\Sigma=\{\sigma_1,\ldots,\sigma_m\}$ o conjunto de símbolos. Para cada $n\in\mathbb{N}$, seja $S_n=\{(\tau_1,\ldots,\tau_n):\tau_1,\ldots,\tau_n\in \Sigma\}$ e ponha $S=\bigcup_{n=1}^\infty S_n$. $S$ é enumerável por ser uma reunião enumerável de conjuntos enumeráveis (finitos).\footnote{\cite[p. 51]{Lima16}} Seja $X$ o conjunto infinito do exercício. A suposição de que cada elemento de $X$ possa ser representado como uma sequência finita de símbolos significa que existe uma função $f:X\to S$. Esta função deve ser injetiva, pois não podemos usar a mesma sequência de símbolos para representar dois ou mais elementos distintos em $X$. Então $f: X\to f(X)\subset S$ é bijetiva e como $f(X)$ é enumerável, por ser um subconjunto de um conjunto enumerável conforme o Exercício 2, $X$ é enumerável.
+	Seja $\Sigma=\{\sigma_1,\ldots,\sigma_m\}$ o conjunto de sÃ­mbolos. Para cada $n\in\mathbb{N}$, seja $S_n=\{(\tau_1,\ldots,\tau_n):\tau_1,\ldots,\tau_n\in \Sigma\}$ e ponha $S=\bigcup_{n=1}^\infty S_n$. $S$ Ã© enumerÃ¡vel por ser uma reuniÃ£o enumerÃ¡vel de conjuntos enumerÃ¡veis (finitos).\footnote{\cite[p. 51]{LimaCA}} Seja $X$ o conjunto infinito do exercÃ­cio. A suposiÃ§Ã£o de que cada elemento de $X$ possa ser representado como uma sequÃªncia finita de sÃ­mbolos significa que existe uma funÃ§Ã£o $f:X\to S$. Esta funÃ§Ã£o deve ser injetiva, pois nÃ£o podemos usar a mesma sequÃªncia de sÃ­mbolos para representar dois ou mais elementos distintos em $X$. EntÃ£o $f: X\to f(X)\subset S$ Ã© bijetiva e como $f(X)$ Ã© enumerÃ¡vel, por ser um subconjunto de um conjunto enumerÃ¡vel conforme o ExercÃ­cio 2, $X$ Ã© enumerÃ¡vel.
 	
-	Todo número racional pode ser escrito como $a/b$, com $a,b\in \mathbb{Z}$, $b\neq 0$. Ambos $a$ e $b$ são escritos como uma sequência finita de símbolos (os algarismos de 0 a 9 e o sinal $+$ ou $-$). Pelo resultado demonstrado acima, $\mathbb{Q}$ é enumerável.
+	Todo nÃºmero racional pode ser escrito como $a/b$, com $a,b\in \mathbb{Z}$, $b\neq 0$. Ambos $a$ e $b$ sÃ£o escritos como uma sequÃªncia finita de sÃ­mbolos (os algarismos de 0 a 9 e o sinal $+$ ou $-$). Pelo resultado demonstrado acima, $\mathbb{Q}$ Ã© enumerÃ¡vel.
 	
-	Cada polinômio com coeficientes inteiros pode ser escrito como uma sequência finita de símbolos, logo o conjunto formado por esses polinômios é enumerável. O conjunto dos números algébricos é a união dos conjuntos das raízes de cada um desses polinômios. Como essa é uma união enumerável (o conjunto desses polinômios é enumerável) de conjuntos finitos (cada polinômio possui um número finito de raízes), o conjunto dos números algébricos é enumerável.
+	Cada polinÃ´mio com coeficientes inteiros pode ser escrito como uma sequÃªncia finita de sÃ­mbolos, logo o conjunto formado por esses polinÃ´mios Ã© enumerÃ¡vel. O conjunto dos nÃºmeros algÃ©bricos Ã© a uniÃ£o dos conjuntos das raÃ­zes de cada um desses polinÃ´mios. Como essa Ã© uma uniÃ£o enumerÃ¡vel (o conjunto desses polinÃ´mios Ã© enumerÃ¡vel) de conjuntos finitos (cada polinÃ´mio possui um nÃºmero finito de raÃ­zes), o conjunto dos nÃºmeros algÃ©bricos Ã© enumerÃ¡vel.
 \end{solucao}
 
 \begin{exercicio}
-	Imagine que o hotel de Hilbert, com uma quantidade infinita enumerável de quartos, todos ocupados, receba infinitos trens com infinitos vagões e cada vagão com infinitos passageiros (todas essas quantidades enumeráveis). Como o gerente pode alocar todos os atuais hóspedes em quartos separados?
+	Imagine que o hotel de Hilbert, com uma quantidade infinita enumerÃ¡vel de quartos, todos ocupados, receba infinitos trens com infinitos vagÃµes e cada vagÃ£o com infinitos passageiros (todas essas quantidades enumerÃ¡veis). Como o gerente pode alocar todos os atuais hÃ³spedes em quartos separados?
 \end{exercicio}
 \begin{solucao}
-	Cada passageiro tem uma identificação $(p,q,r)$: $p$ = número do trem; $q$ = número do vagão; $r$ = número do assento. Cada hóspede no quarto $n$ será realocado para o quarto $2n-1$, e cada passageiro com ID $(p,q,r)$ será hospedado no quarto $2^p3^q(2r-1)$.
+	Cada passageiro tem uma identificaÃ§Ã£o $(p,q,r)$: $p$ = nÃºmero do trem; $q$ = nÃºmero do vagÃ£o; $r$ = nÃºmero do assento. Cada hÃ³spede no quarto $n$ serÃ¡ realocado para o quarto $2n-1$, e cada passageiro com ID $(p,q,r)$ serÃ¡ hospedado no quarto $2^p3^q(2r-1)$.
 	
-	Isto pode ser generalizado: hóspede $n\mapsto$ quarto $2n-1$; passageiro $(a_1,\ldots,a_m)\mapsto$ quarto $2^{a_1}3^{a_2}\cdots p_{m-1}^{a_{m-1}}(2a_m-1)$, em que $2,3,\ldots,p_{m-1}$ são números primos.
+	Isto pode ser generalizado: hÃ³spede $n\mapsto$ quarto $2n-1$; passageiro $(a_1,\ldots,a_m)\mapsto$ quarto $2^{a_1}3^{a_2}\cdots p_{m-1}^{a_{m-1}}(2a_m-1)$, em que $2,3,\ldots,p_{m-1}$ sÃ£o nÃºmeros primos.
 \end{solucao}
 
 \begin{exercicio}
-	Imagine, agora, um hotem maior ainda, com um quarto para cada número real, totalmente ocupado. Um ônibus igualmente gigantesco, com um passageiro para cada número real, chega ao hotel. Como o gerente pode fazer para rearranjar os hóspedes para acolher os novos visitantes, sempre em quartos separados?
+	Imagine, agora, um hotem maior ainda, com um quarto para cada nÃºmero real, totalmente ocupado. Um Ã´nibus igualmente gigantesco, com um passageiro para cada nÃºmero real, chega ao hotel. Como o gerente pode fazer para rearranjar os hÃ³spedes para acolher os novos visitantes, sempre em quartos separados?
 \end{exercicio}
 \begin{solucao}
 	\begin{itemize}
-		\item Hóspede $x\mapsto$ quarto $\arctan x$.
+		\item HÃ³spede $x\mapsto$ quarto $\arctan x$.
 		\item Passageiro $y\mapsto$ quarto $y+\pi/2$ se $y\geq0$ ou $y-\pi/2$ se $y<0$. 
 	\end{itemize}
-	Note que o hotel ficará com um quarto vago (o de número $-\pi/2$).
+	Note que o hotel ficarÃ¡ com um quarto vago (o de nÃºmero $-\pi/2$).
 \end{solucao}
