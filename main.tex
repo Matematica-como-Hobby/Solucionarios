@@ -6,6 +6,7 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage[colorlinks=true]{hyperref}
+\usepackage{enumitem}
 \usepackage[
 backend=biber,
 style=alphabetic,
@@ -16,11 +17,13 @@ sorting=ynt
 \title{A teoria dos conjuntos e os fundamentos da matemática - Soluções}
 
 \newcommand{\cqd}{\hfill $\square$}
+
 \newenvironment{solucao}[1][]{\noindent\textbf{Solução:} }{\cqd}
-\newtheorem{exercicio}{Exercício}
+\newcounter{ex}
+\newtheorem{exercicio}[ex]{Exercício}
 
 \begin{document}
-	
+
     \author{}
 	\maketitle
     \tableofcontents
@@ -38,4 +41,5 @@ sorting=ynt
 	\include{capitulos/cap12}
 	
 	\printbibliography
+
 \end{document}
