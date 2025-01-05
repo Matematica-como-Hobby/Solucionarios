@@ -1,5 +1,7 @@
 \chapter{A linguagem da Teoria dos Conjuntos}
 
+\setcounter{ex}{0}
+
 \begin{exercicio}
 	Usando a linguagem de primeira ordem da teoria de conjuntos, escreva fórmulas para representar as seguintes frases.
 \end{exercicio}
@@ -15,7 +17,7 @@
 	\item[d)] Existe um conjunto que tem como elemento apenas o conjunto vazio
     \item[] $\exists x \forall y ((y \in x) \leftrightarrow y = \phi)$
 	\item[e)] y é o conjunto dos subconjuntos de x 
-    \item[] sendo r um subconjunto qualquer de x então $ A_r = \forall a ((a \in r) \rightarrow (a \in x)) $ assim podemos escrever $ \exists y \forall w ([A]_r^w \leftrightarrow w \in y) ]$
+    \item[] $\forall z (z \in y \leftrightarrow \forall w (w \in z \to w \in x))$.
     
 \end{enumerate}
 
