@@ -1,0 +1,10 @@
+# latex compiler
+
+*.aux
+*.out
+*.log
+*.fls
+*.synctex*
+*.toc
+*.fdb_latexmk
+

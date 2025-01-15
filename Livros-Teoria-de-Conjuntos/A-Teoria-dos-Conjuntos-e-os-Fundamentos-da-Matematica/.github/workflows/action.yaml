@@ -1,0 +1,62 @@
+name: tex to pdf
+run-name: build pdf from tex
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: configure the bases and build pdf
+    runs-on: ubuntu-latest
+    steps:
+      - id: checkout-code
+        name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: install dependecies
+        run: |
+          sudo apt update
+          sudo apt install -y texlive texlive-latex-extra texlive-bibtex-extra
+      
+      - id: build-pdf
+        name: Run bibtex and pdflatex
+        run: |
+          pdflatex main
+          bibtex main
+          pdflatex main
+
+
+      - id: save-pdf
+        name: Upload pdf as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Artifacts
+          path: ./main.pdf
+
+  deploy:
+    name: upload pdf into main
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - id: checkout-code
+        name: Checkout Code
+        uses: actions/checkout@v4
+
+      - id: Download-Artifacts
+        name: Download pdf
+        uses: actions/download-artifact@v4
+        with:
+          name: Artifacts
+
+      - id: update-pdf
+        name: Commit and Push the pdf file
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git add main.pdf
+          git commit -m "Update generated PDF"
+          git push
