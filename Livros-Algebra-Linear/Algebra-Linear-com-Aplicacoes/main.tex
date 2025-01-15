@@ -1,0 +1,44 @@
+\documentclass[portuguese,12pt,a4paper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{enumitem}
+\usepackage[
+backend=bibtex,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+\addbibresource{bibliografia.bib}
+
+\title{ Álgebra Linear com Aplicações - Soluções}
+
+\newcommand{\cqd}{\hfill $\square$}
+
+\newenvironment{solucao}[1][]{\noindent\textbf{Solução:} }{\cqd}
+\newcounter{ex}
+\newtheorem{exercicio}[ex]{Exercício}
+
+\begin{document}
+
+	\author{}
+	\maketitle
+	\tableofcontents
+
+	\include{capitulos/cap1}
+	\include{capitulos/cap2}
+	\include{capitulos/cap3}
+	\include{capitulos/cap4}
+	\include{capitulos/cap5}
+	\include{capitulos/cap6}
+	\include{capitulos/cap7}
+	\include{capitulos/cap8}
+	\include{capitulos/cap9}
+	\include{capitulos/cap10}
+	
+	\printbibliography
+
+\end{document}
