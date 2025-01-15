@@ -1,0 +1,13 @@
+name: tex to pdf
+run-name: build pdf from tex
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - Livros-**
+
+  workflow_dispatch:
+
+
