@@ -1,4 +1,4 @@
-\chapter{Produto Cartesiano, RelaÁıes e FunÁıes}
+\chapter{Produto Cartesiano, Rela√ß√µes e Fun√ß√µes}
 
 \setcounter{ex}{0}
 
@@ -10,10 +10,10 @@
 \end{solucao}
 
 \begin{exercicio}
-	Prove que, se $A\subset C$ e $B\subset D$, ent„o $A\times B\subset C\times D$.
+	Prove que, se $A\subset C$ e $B\subset D$, ent√£o $A\times B\subset C\times D$.
 \end{exercicio}
 \begin{solucao}
-	Dado um par ordenado $(a,b)\in A\times B$, temos que $a\in A$ e $b\in B$. Uma vez que $A\subset C$ e $B\subset D$, ent„o $a\in C$ e $b\in D$, logo $(a,b)\in C\times D$. Portanto $A\times B\subset C\times D$.
+	Dado um par ordenado $(a,b)\in A\times B$, temos que $a\in A$ e $b\in B$. Uma vez que $A\subset C$ e $B\subset D$, ent√£o $a\in C$ e $b\in D$, logo $(a,b)\in C\times D$. Portanto $A\times B\subset C\times D$.
 \end{solucao}
 
 \begin{exercicio}
@@ -58,7 +58,7 @@
 \end{solucao}
 
 \begin{exercicio}
-	Para qual(is) das seguintes definiÁıes alternativas de pares ordenados o teorema 4.2 continua valendo? Justifique.
+	Para qual(is) das seguintes defini√ß√µes alternativas de pares ordenados o teorema 4.2 continua valendo? Justifique.
 	\begin{enumerate}[label=(\alph{*})]
 		\item $(a,b)=\{a,\{b\}\}$;
 		\item $(a,b)=\{\{a\},\{b\}\}$;
@@ -78,10 +78,10 @@
 \end{solucao}
 
 \begin{exercicio}
-	DÍ exemplo de uma funÁ„o injetora de $\omega$ em $\omega$ que n„o È injetora.
+	D√™ exemplo de uma fun√ß√£o injetora de $\omega$ em $\omega$ que n√£o √© injetora.
 \end{exercicio}
 \begin{solucao}
-	Pelo Teorema Fundamental da AritmÈtica, todo n˙mero natural $n\geq2$ pode ser escrito como um produto de n˙meros primos $n=p_1\cdots p_m$, e este produto È ˙nico a menos da ordem dos fatores. Esse teorema nos permite definir uma funÁ„o $f:\omega\to\omega$ pondo $f(0)=0$, $f(1)=1$ e, para cada $n\geq2$, $f(n)=m$, em que $m$ È a quantidade de fatores primos na decomposiÁ„o de $n$. $f$ È sobrejetiva, pois, por exemplo, para cada $m\in\omega$, $f(2^m)=m$, mas $f$ n„o È injetiva, pois, por exemplo, $f(2^m)=f(3^m)$ e $2^m\neq 3^m$ se $m\geq1$.
+	Pelo Teorema Fundamental da Aritm√©tica, todo n√∫mero natural $n\geq2$ pode ser escrito como um produto de n√∫meros primos $n=p_1\cdots p_m$, e este produto √© √∫nico a menos da ordem dos fatores. Esse teorema nos permite definir uma fun√ß√£o $f:\omega\to\omega$ pondo $f(0)=0$, $f(1)=1$ e, para cada $n\geq2$, $f(n)=m$, em que $m$ √© a quantidade de fatores primos na decomposi√ß√£o de $n$. $f$ √© sobrejetiva, pois, por exemplo, para cada $m\in\omega$, $f(2^m)=m$, mas $f$ n√£o √© injetiva, pois, por exemplo, $f(2^m)=f(3^m)$ e $2^m\neq 3^m$ se $m\geq1$.
 \end{solucao}
 
 \begin{exercicio}
@@ -92,42 +92,42 @@
 \end{solucao}
 
 \begin{exercicio}
-	Seja $X$ um conjunto e sejam $x_0$ e $y_0$ dois elementos distintos de $X$. Considere a relaÁ„o em $X$:
+	Seja $X$ um conjunto e sejam $x_0$ e $y_0$ dois elementos distintos de $X$. Considere a rela√ß√£o em $X$:
 	$$R=\{(x,y)\in X\times X:x=y\}\cup\{(x_0,y_0),(y_0,x_0)\}$$
 	\begin{enumerate}[label=(\alph{*})]
-		\item Prove que $R$ È uma relaÁ„o de equivalÍncia em $X$.
+		\item Prove que $R$ √© uma rela√ß√£o de equival√™ncia em $X$.
 		\item Descreva os elementos de $X/R$.
 	\end{enumerate}
 \end{exercicio}
 \begin{solucao}
 	\begin{enumerate}[label=(\alph{*})]
-		\item Devemos demonstrar que a relaÁ„o $R$ È reflexiva, simÈtrica e transitiva. Em linguagem de primeira ordem:
+		\item Devemos demonstrar que a rela√ß√£o $R$ √© reflexiva, sim√©trica e transitiva. Em linguagem de primeira ordem:
 		$$xRy\leftrightarrow(x=y)\vee(x=x_0\wedge y=y_0)\vee(x=y_0\wedge y=x_0).$$
 		
 		\textbf{Reflexividade:} Para qualquer $x\in X$, $x=x$, logo $xRx$.
 		
 		\textbf{Simetria:} Se $xRy$, temos os seguintes casos:
 		\begin{enumerate}[label=Caso \arabic{*}.]
-			\item $x=y$: Ent„o $y=x$, logo $yRx$;
-			\item $x=x_0$: Ent„o $y=x_0$ ou $y=y_0$. Se $y=x_0$, teremos $y=x$, logo $yRx$. Se $y=y_0$, o par $(x_0,y_0)\in R$ pela definiÁ„o de $R$. Como $(y_0,x_0)\in R$ por definiÁ„o, temos que vale $y_0Rx_0$, logo $yRx$.
-			\item $x=y_0$: … an·logo ao caso 2.
+			\item $x=y$: Ent√£o $y=x$, logo $yRx$;
+			\item $x=x_0$: Ent√£o $y=x_0$ ou $y=y_0$. Se $y=x_0$, teremos $y=x$, logo $yRx$. Se $y=y_0$, o par $(x_0,y_0)\in R$ pela defini√ß√£o de $R$. Como $(y_0,x_0)\in R$ por defini√ß√£o, temos que vale $y_0Rx_0$, logo $yRx$.
+			\item $x=y_0$: √â an√°logo ao caso 2.
 		\end{enumerate}
 		
 		\textbf{Transitividade:} Se $xRy$ e $yRz$, temos os casos
 		\begin{enumerate}[label=Caso \arabic{*}.]
-			\item $x\neq x_0$ e $y\neq y_0$: Ent„o $x=y$ e $y=z$, logo $x=z$ e, portanto, $xRz$.
-			\item $x=x_0$ e $y\neq y_0$: Se $x=x_0$, ent„o $y=x_0$ ou $y=y_0$, mas pela hipÛtese deste caso, deve-se ter $y=x_0$. Como tambÈm $yRz$, ent„o $y=z$ ou $y=y_0$ e $z=x_0$ (este caso est· descartado), ou $y=x_0$ e $z=y_0$. Ent„o $z=x_0$ (logo $zRx$ que, por reflexividade, d· $xRz$) ou $z=y_0$ (que, pela definiÁ„o de $R$, $x_0Ry_0$, logo $xRz$). Em qualquer caso $xRz$, que desej·vamos.
-			\item $x\neq x_0$ e $y=y_0$: An·logo ao caso 2.
-			\item $x=x_0$ e $y=y_0$: Como $yRz$, ent„o $z=y_0$ ou $z=x_0$. Em qualquer caso $xRz$ pela definiÁ„o de $R$.
+			\item $x\neq x_0$ e $y\neq y_0$: Ent√£o $x=y$ e $y=z$, logo $x=z$ e, portanto, $xRz$.
+			\item $x=x_0$ e $y\neq y_0$: Se $x=x_0$, ent√£o $y=x_0$ ou $y=y_0$, mas pela hip√≥tese deste caso, deve-se ter $y=x_0$. Como tamb√©m $yRz$, ent√£o $y=z$ ou $y=y_0$ e $z=x_0$ (este caso est√° descartado), ou $y=x_0$ e $z=y_0$. Ent√£o $z=x_0$ (logo $zRx$ que, por reflexividade, d√° $xRz$) ou $z=y_0$ (que, pela defini√ß√£o de $R$, $x_0Ry_0$, logo $xRz$). Em qualquer caso $xRz$, que desej√°vamos.
+			\item $x\neq x_0$ e $y=y_0$: An√°logo ao caso 2.
+			\item $x=x_0$ e $y=y_0$: Como $yRz$, ent√£o $z=y_0$ ou $z=x_0$. Em qualquer caso $xRz$ pela defini√ß√£o de $R$.
 		\end{enumerate}
 		
-		Isto conclui a prova de que $R$ È uma relaÁ„o de equivalÍncia.
+		Isto conclui a prova de que $R$ √© uma rela√ß√£o de equival√™ncia.
 		
 		\item Lembre que $[x]_R=\{y\in X:xRy\}$. Dividimos novamente em casos.
 		\begin{enumerate}[label=Caso \arabic{*}.]
-			\item $x\neq x_0$ e $x\neq y_0$: Ent„o $xRy\leftrightarrow x=y$, logo $[x]_R=\{x\}$.
-			\item $x= x_0$ e $x\neq y_0$: Ent„o $xRy\leftrightarrow (x=y)\vee (y=y_0)$, logo $[x]_R=\{x_0,y_0\}$.
-			\item $x\neq x_0$ e $x= y_0$: Ent„o $xRy\leftrightarrow (x=y)\vee (y=x_0)$, logo $[x]_R=\{x_0,y_0\}$.
+			\item $x\neq x_0$ e $x\neq y_0$: Ent√£o $xRy\leftrightarrow x=y$, logo $[x]_R=\{x\}$.
+			\item $x= x_0$ e $x\neq y_0$: Ent√£o $xRy\leftrightarrow (x=y)\vee (y=y_0)$, logo $[x]_R=\{x_0,y_0\}$.
+			\item $x\neq x_0$ e $x= y_0$: Ent√£o $xRy\leftrightarrow (x=y)\vee (y=x_0)$, logo $[x]_R=\{x_0,y_0\}$.
 		\end{enumerate}
 		
 		Em resumo, $X/R=\{\{x\}:x\in X\setminus\{x_0,y_0\}\}\cup\{\{x_0,y_0\}\}.$
@@ -142,7 +142,7 @@
 \end{solucao}
 
 \begin{exercicio}
-	Como fica uma relaÁ„o de equivalÍncia sobre $\emptyset$? Ela satisfaz o Teorema 4.28?
+	Como fica uma rela√ß√£o de equival√™ncia sobre $\emptyset$? Ela satisfaz o Teorema 4.28?
 \end{exercicio}
 \begin{solucao}
 	content
@@ -156,12 +156,12 @@
 \end{solucao}
 
 \begin{exercicio}
-	DÍ exemplo ou prove que n„o existe.
+	D√™ exemplo ou prove que n√£o existe.
 	\begin{enumerate}[label=(\alph{*})]
-		\item Uma ordem total que n„o È uma boa ordem.
-		\item Uma ·rvore que n„o È uma ordem total.
-		\item Um reticulado que n„o È ·rvore.
-		\item Uma ·rvore que È um reticulado mas n„o È totalmente ordenado.
+		\item Uma ordem total que n√£o √© uma boa ordem.
+		\item Uma √°rvore que n√£o √© uma ordem total.
+		\item Um reticulado que n√£o √© √°rvore.
+		\item Uma √°rvore que √© um reticulado mas n√£o √© totalmente ordenado.
 	\end{enumerate}
 \end{exercicio}
 \begin{solucao}
@@ -195,17 +195,17 @@
 \end{solucao}
 
 \begin{exercicio}
-	Use o teorema da recurs„o e as operaÁıes de adiÁ„o e multiplicaÁ„o para definir cada uma das seguintes funÁıes de domÌnio $\omega$. Em cada item, utilize a vers„o do teorema da recurs„o mais adequada.
+	Use o teorema da recurs√£o e as opera√ß√µes de adi√ß√£o e multiplica√ß√£o para definir cada uma das seguintes fun√ß√µes de dom√≠nio $\omega$. Em cada item, utilize a vers√£o do teorema da recurs√£o mais adequada.
 	\begin{enumerate}[label=(\alph{*})]
-		\item a funÁ„o $f(n)=2^n$;
-		\item o fatorial, isto È, $f(n)=n!$, onde $0!=1$ e $(n+1)!=(n+1)\cdot n!$;
-		\item a sequÍncia de Fibonacci, ou seja, a funÁ„o $f:\omega\to\omega$ tal que $f(0)=f(1)=1$ e $f(n+2)=f(n)+f(n+1)$.
+		\item a fun√ß√£o $f(n)=2^n$;
+		\item o fatorial, isto √©, $f(n)=n!$, onde $0!=1$ e $(n+1)!=(n+1)\cdot n!$;
+		\item a sequ√™ncia de Fibonacci, ou seja, a fun√ß√£o $f:\omega\to\omega$ tal que $f(0)=f(1)=1$ e $f(n+2)=f(n)+f(n+1)$.
 	\end{enumerate}
 \end{exercicio}
 \begin{solucao}
 	\begin{enumerate}[label=(\alph{*})]
-		\item Para cada $n$ podemos escrever $f(n+1)=2^{n+1}=2\cdot 2^n=2\cdot f(n)$. Isto nos motiva a definir $g:\omega\to\omega$ por $g(x)=2x$. Pelo Teorema da Recurs„o Finita, existe uma ˙nica funÁ„o $f:\omega\to\omega$ tal que $f(0)=1$ e $f(n+1)=g(f(n))=2\cdot f(n)$.
-		\item Para cada $n$ podemos escrever $f(n+1)=(n+1)!=(n+1)\cdot n!=(n+1)\cdot f(n)$. Isto nos motiva a definir $g:\omega\times\omega\to\omega$ por $g(x,y)=(x+1)\cdot y$. Pelo Teorema da Recurs„o Finita com Par‚metro, existe uma ˙nica funÁ„o $f:\omega\to\omega$ tal que $f(0)=1$ e $f(n+1)=g(n,f(n))=(n+1)\cdot f(n)$.
+		\item Para cada $n$ podemos escrever $f(n+1)=2^{n+1}=2\cdot 2^n=2\cdot f(n)$. Isto nos motiva a definir $g:\omega\to\omega$ por $g(x)=2x$. Pelo Teorema da Recurs√£o Finita, existe uma √∫nica fun√ß√£o $f:\omega\to\omega$ tal que $f(0)=1$ e $f(n+1)=g(f(n))=2\cdot f(n)$.
+		\item Para cada $n$ podemos escrever $f(n+1)=(n+1)!=(n+1)\cdot n!=(n+1)\cdot f(n)$. Isto nos motiva a definir $g:\omega\times\omega\to\omega$ por $g(x,y)=(x+1)\cdot y$. Pelo Teorema da Recurs√£o Finita com Par√¢metro, existe uma √∫nica fun√ß√£o $f:\omega\to\omega$ tal que $f(0)=1$ e $f(n+1)=g(n,f(n))=(n+1)\cdot f(n)$.
 		\item Defina $g:\omega^{<\omega}\to \omega$ por
 		$$
 		g(x)=\left\{
@@ -215,9 +215,9 @@
 			\end{array}
 		\right.
 		$$
-		Pelo Teorema da Recurs„o Completa, existe uma ˙nica funÁ„o $f:\omega\to\omega$ tal que $f(n)=g(f|n)$. Perceba que
+		Pelo Teorema da Recurs√£o Completa, existe uma √∫nica fun√ß√£o $f:\omega\to\omega$ tal que $f(n)=g(f|n)$. Perceba que
 		$$f(0)=g(f|0)=1 \qquad \mathrm{e} \qquad f(1)=g(f|1)=1,$$
-		pois, pela definiÁ„o de $g$, $g(x)=1$ se $\dom x=0$ ou $\dom x=1$. Para $n>1$, pela definiÁ„o de $g$,
-		$f(n)=g(f|n)=f(n-1)+f(n-2)$. Isto mostra que a funÁ„o descrita no exercÌcio existe de fato.
+		pois, pela defini√ß√£o de $g$, $g(x)=1$ se $\dom x=0$ ou $\dom x=1$. Para $n>1$, pela defini√ß√£o de $g$,
+		$f(n)=g(f|n)=f(n-1)+f(n-2)$. Isto mostra que a fun√ß√£o descrita no exerc√≠cio existe de fato.
 	\end{enumerate}
 \end{solucao}
