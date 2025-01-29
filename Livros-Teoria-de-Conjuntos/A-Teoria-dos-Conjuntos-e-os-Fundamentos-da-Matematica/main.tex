@@ -5,29 +5,29 @@
 \usepackage{mathtools}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{babel}
 \usepackage[colorlinks=true]{hyperref}
 \usepackage{enumitem}
 \usepackage[
-backend=bibtex,
-style=alphabetic,
-sorting=ynt
+	backend=bibtex,
+	style=alphabetic,
+	sorting=ynt
 ]{biblatex}
 \addbibresource{bibliografia.bib}
 
 \title{A teoria dos conjuntos e os fundamentos da matemática - Soluções}
 
 \newcommand{\cqd}{\hfill $\square$}
-
-\newenvironment{solucao}[1][]{\noindent\textbf{Solução:} }{\cqd}
+\newenvironment{solucao}[1][]{\noindent\textbf{Solução#1:} }{\cqd}
 \newcounter{ex}
 \newtheorem{exercicio}[ex]{Exercício}
+\DeclareMathOperator{\dom}{dom}
 
 \begin{document}
-
-	\author{}
+	
 	\maketitle
 	\tableofcontents
-
+	
 	\include{capitulos/cap1}
 	\include{capitulos/cap2}
 	\include{capitulos/cap3}
@@ -41,6 +41,6 @@ sorting=ynt
 	\include{capitulos/cap11}
 	\include{capitulos/cap12}
 	
-	\printbibliography
-
+	\printbibliography[title=Referências]
+	
 \end{document}
