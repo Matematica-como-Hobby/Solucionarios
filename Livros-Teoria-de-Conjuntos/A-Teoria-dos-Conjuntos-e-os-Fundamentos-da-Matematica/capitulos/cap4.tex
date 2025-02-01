@@ -13,7 +13,7 @@
 	Prove que, se $A\subset C$ e $B\subset D$, então $A\times B\subset C\times D$.
 \end{exercicio}
 \begin{solucao}
-	Dado um par ordenado $(a,b)\in A\times B$, temos que $a\in A$ e $b\in B$. Uma vez que $A\subset C$ e $B\subset D$, então $a\in C$ e $b\in D$, logo $(a,b)\in C\times D$. Portanto $A\times B\subset C\times D$.
+	Se $A=\emptyset$ ou $B=\emptyset$, então pelo Exercício 1, $A\times B=\emptyset$ e temos trivialmente $A\times B\subset C\times D$. Suponha então que $A\times B\neq\emptyset$. Dado um par ordenado $(a,b)\in A\times B$, temos que $a\in A$ e $b\in B$. Uma vez que $A\subset C$ e $B\subset D$, então $a\in C$ e $b\in D$, logo $(a,b)\in C\times D$. Portanto $A\times B\subset C\times D$.
 \end{solucao}
 
 \begin{exercicio}
@@ -47,7 +47,11 @@
 	Prove que $x^0=1$, para todo conjunto $x$, e explique o que isso significa.
 \end{exercicio}
 \begin{solucao}
-	content
+	$x^0$ é o conjunto das funções de $0=\emptyset$ em $x$. Perceba inicialmente que $\emptyset\times x=\emptyset$ pelo Exercício 1, logo $\emptyset$ é uma relação. Afirmamos que essa relação é uma função. Com efeito, dizer que $\emptyset$ é função significa que se $a\emptyset b$ e $a\emptyset c$, então $b=c$. As afirmações $a\emptyset b$ e $a\emptyset c$ são ambas falsas, logo a sentença $((a\emptyset b)\wedge(a\emptyset c))\to(b=c)$ é verdadeira (independente de $b=c$ ser verdadeiro ou falso). Portanto $\emptyset$ é uma função. Note que $\dom(\emptyset)=\emptyset$.
+	
+	Afirmamos agora que $\emptyset$ é a única função cujo domínio é $\emptyset$. Com efeito, se $f:\emptyset\to x$ é uma função e $f\neq\emptyset$, então existe um par $(a,b)\in f$. Por definição de relação, $a\in\emptyset$ e $b\in x$, mas $a\in\emptyset$ é um absurdo. Logo $f=\emptyset$.
+	
+	Portanto $x^0=\{\emptyset\}=1$.
 \end{solucao}
 
 \begin{exercicio}
@@ -67,7 +71,16 @@
 	\end{enumerate}
 \end{exercicio}
 \begin{solucao}
-	content
+	\begin{enumerate}[label=(\alph{*})]
+		\item Não vale, pois $(1,1)=(\{1\},0)=\{1,\{1\}\}$.
+		\item Não vale, pois $(a,b)=\{\{a\},\{b\}\}=\{\{b\},\{a\}\}=(b,a)$, e isto contraria o teorema se $a\neq b$.
+		\item Não vale, pois $(1,1)=(\{1\},0)=\{\{1\},\{\{1\}\}\}$.
+		\item Suponha que $(a,b)=(c,d)$. Então $\{\{0,a\},\{1,b\}\}=\{\{0,c\},\{1,d\}\}$. Se $a=b$, então $(a,b)=\{\{0,a\},\{1,a\}\}$, logo $\{0,c\}=\{0,a\}$ (e $\{1,d\}=\{1,a\}$) ou $\{0,c\}=\{1,a\}$ (e $\{1,d\}=\{0,a\}$). No primeiro caso teremos $c=a$ e $d=a$, logo $d=b$. No segundo, não podemos ter $c=a$, pois assim teremos $0=1$. Então $c=1$ e $a=0$. Da mesma forma, $d=0$ e $a=1$. Disto concluímos que $a=0$ e $a=1$, um absurdo. Portanto este segundo caso não pode ocorrer. Assim só vale o primeiro caso, que é $c=a$ e $d=b(=a)$.
+		
+		Suponha agora que $a\neq b$. Então $\{0,a\}=\{0,c\}$ e $\{1,b\}=\{1,d\}$, logo $a=c$ e $b=d$, ou $\{0,a\}=\{1,d\}$ e $\{1,b\}=\{0,c\}$, mas este segundo caso não pode ocorrer pois isto gerará a conclusão de que $0=1$, como visto acima.
+		
+		Em ambos os casos esdudados, $a=c$ e $b=d$, logo o teorema é válido para esta definição de par ordenado.
+	\end{enumerate}
 \end{solucao}
 
 \begin{exercicio}
@@ -78,7 +91,7 @@
 \end{solucao}
 
 \begin{exercicio}
-	Dê exemplo de uma função injetora de $\omega$ em $\omega$ que não é injetora.
+	Dê exemplo de uma função sobrejetora de $\omega$ em $\omega$ que não é injetora.
 \end{exercicio}
 \begin{solucao}
 	Pelo Teorema Fundamental da Aritmética, todo número natural $n\geq2$ pode ser escrito como um produto de números primos $n=p_1\cdots p_m$, e este produto é único a menos da ordem dos fatores. Esse teorema nos permite definir uma função $f:\omega\to\omega$ pondo $f(0)=0$, $f(1)=1$ e, para cada $n\geq2$, $f(n)=m$, em que $m$ é a quantidade de fatores primos na decomposição de $n$. $f$ é sobrejetiva, pois, por exemplo, para cada $m\in\omega$, $f(2^m)=m$, mas $f$ não é injetiva, pois, por exemplo, $f(2^m)=f(3^m)$ e $2^m\neq 3^m$ se $m\geq1$.
@@ -145,7 +158,7 @@
 	Como fica uma relação de equivalência sobre $\emptyset$? Ela satisfaz o Teorema 4.28?
 \end{exercicio}
 \begin{solucao}
-	content
+	Se $R$ é uma relação sobre $\emptyset$, então $R\subset \emptyset\times\emptyset=\emptyset$, logo $R=\emptyset$. $\emptyset$ é uma relação de equivalência, já que não existem elementos de $\emptyset$ para desmentir esta afirmação. As classes de equivalência são todas vazias, ou melhor, $\forall x \in \emptyset ([x]_{\emptyset}=\emptyset)$. Isto mostra que o item (b) do Teorema 4.28 não vale. Portanto $\emptyset$ não satisfaz o teorema.
 \end{solucao}
 
 \begin{exercicio}
@@ -165,7 +178,14 @@
 	\end{enumerate}
 \end{exercicio}
 \begin{solucao}
-	content
+	\begin{enumerate}[label=(\alph{*})]
+		\item $(\mathbb{Q},\leq)$ é uma ordem total, mas não é bem ordenado, por exemplo o conjunto $\{x\in\mathbb{Q}:x>0\}$ não possui elemento mínimo.
+		\item Considerando o conjunto $X=\{0,1,2\}$ e a ordem $\leq=\{(0,0),(1,1),(2,2),(0,1),(0,2)\}$, $(X,\leq)$ é uma árvore, mas não é uma ordem total -- por exemplo, não podemos comparar 1 com 2.
+		\item O conjunto $X=\{0,1,2,3\}$ com a ordem
+		$$\leq=\{(0,0),(1,1),(2,2),(3,3),(0,1),(0,2),(0,3),(1,3),(2,3)\}$$
+		é um reticulado, mas não é uma árvore.
+		\item Seja $(X,\leq)$ uma árvore que é também um reticulado. Dados $x,y\in X$, o conjunto $\{x,y\}$ possui um supremo, que chamaremos $s$. O conjunto $S=\{z\in X:z\leq s\}$ é bem ordenado. Então o conjunto $\{x,y\}\subset S$ possui um elemento mínimo, que deve ser $x$ ou $y$, logo $x\leq y$ ou $y\leq x$. Portanto $(X,\leq)$ é totalmente ordenado. Isto mostra que não existe uma árvore que é um reticulado mas não é totalmente ordenada.
+	\end{enumerate}
 \end{solucao}
 
 \begin{exercicio}
