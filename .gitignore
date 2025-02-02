@@ -1,5 +1,9 @@
 # latex compiler
 
+*-blx.bib
+*.run.xml
+*.bbl
+*.blg
 *.aux
 *.out
 *.log
