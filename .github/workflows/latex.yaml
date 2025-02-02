@@ -5,7 +5,86 @@ on:
   push:
     branches:
       - main
+
     paths:
-      - Livros-**
+      - 'books/**'
+      - '!**README.md'
 
   workflow_dispatch:
+
+
+jobs:
+  search:
+    name: Get the changes
+    runs-on: ubuntu-latest
+    outputs:
+      output1: ${{ steps.get-diff.outputs.dir }}
+
+    steps:
+      - id: checkout-code
+        name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - id: get-diff
+        name: Get the diretorys for build, by git diff
+        run: |
+          dir=$(git diff --name-only ${{ github.event.after }} ${{ github.event.before }} | grep books | cut -f2,3 -d "/" | sort -u )
+          echo dir=$dir >> $GITHUB_OUTPUT
+
+  build:
+    needs: search
+    name: build the pdfs
+
+    runs-on: ubuntu-latest
+    container: srcoffe/latex
+    
+    steps:
+      - id: checkout-code
+        name: Checkout Code
+        uses: actions/checkout@v4
+      
+      - id: build-pdfs
+        name: build pdf from latex
+        working-directory: ./books
+        run: |
+          for i in $OUTPUT1; do
+            (cd $i ; latex main ; bibtex main; pdflatex main )
+          done
+        env:
+          OUTPUT1: ${{needs.search.outputs.output1}}
+
+      - id: save-pdf
+        name: Upload pdf as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Artifacts
+          path: books/*/*/*.pdf
+
+  deploy:
+    name: deploy into main
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - id: checkout-code
+        name: Checkout code
+        uses: actions/checkout@v4
+
+      - id: download-artifacts
+        name: Download pdfs
+        uses: actions/download-artifact@v4
+        with:
+          name: Artifacts
+          merge-multiple: true
+          path: books
+
+      - id: update-pdf
+        name: Commit and Push the pdf file
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git add books/*/*/*.pdf -f
+          git commit -m "deploy: pdfs builded by actions"
+          git push
