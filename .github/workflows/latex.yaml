@@ -9,5 +9,3 @@ on:
       - Livros-**
 
   workflow_dispatch:
-
-
